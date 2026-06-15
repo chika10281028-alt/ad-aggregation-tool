@@ -1,0 +1,12 @@
+/* テーブルヘッダーの背景色を設定 */
+#addatas-table thead tr {
+  background-color: #9bfa81;
+}
+
+.condition {
+display: flex;
+}
+
+.condition-item {
+padding: 10px;
+}
