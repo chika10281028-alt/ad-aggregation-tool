@@ -24,21 +24,21 @@ class AdAggregationController extends Controller
     $query->where('addatas.activeFlg', '1');
 
     // 開始日時、終了日時が空でない場合、検索条件に含める
-    if (!empty($startDate)) {
+    if (isset($startDate)) {
       $query->whereDate('addatas.createdDate', '>=', $startDate);
     }
 
-    if (!empty($endDate)) {
+    if (isset($endDate)) {
       $query->whereDate('addatas.createdDate', '<=', $endDate);
     }
 
     //$mediaが空ではない場合、検索処理に含める
-    if (!empty($media)) {
+    if (isset($media)) {
       $query->where('addatas.mediasId', '=', $media);
     }
 
     //$keywordが空ではない場合、検索処理に含める
-    if (!empty($keyword)) {
+    if (isset($keyword)) {
       $query->where('campaigns.name', 'LIKE', "%{$keyword}%");
     }
     $addatas = $query->select(
@@ -54,7 +54,7 @@ class AdAggregationController extends Controller
     )
       ->sortable()->get();
 
-    $medias = Medias::get();
+    $medias = Medias::where('activeFlg', '1')->get();
 
     return view('adaggregation', compact('addatas', 'medias'));
   }
