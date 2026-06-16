@@ -49,7 +49,7 @@
             </div>
 
             <div class="condition condition-item">
-                <input type="button" onclick="location.href='./adaggregation'" value="一覧へ戻る">
+                <input type="button" onclick="location.href='./'" value="一覧へ戻る">
             </div>
         </div>
 

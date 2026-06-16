@@ -70,7 +70,7 @@
             </div>
 
             <div class="condition condition-item">
-                <input type="button" onclick="location.href='./adaggregation'" value="一覧へ戻る">
+                <input type="button" onclick="location.href='./'" value="一覧へ戻る">
             </div>
         </div>
 
@@ -96,10 +96,10 @@
             <td>{{$addata->id}}</td>
             <td>{{$addata->mediaName}}</td>
             <td>{{$addata->campaignName}}</td>
-            <td><?php echo number_format($addata->impression); ?></td>
-            <td><?php echo number_format($addata->click); ?></td>
-            <td><?php echo number_format($addata->cost); ?></td>
-            <td><?php echo number_format($addata->cv); ?></td>
+            <td align="right"><?php echo number_format($addata->impression); ?></td>
+            <td align="right"><?php echo number_format($addata->click); ?></td>
+            <td align="right"><?php echo number_format($addata->cost); ?></td>
+            <td align="right"><?php echo number_format($addata->cv); ?></td>
             <td>{{$addata->createdDate}}</td>
             <td>
                 <?php

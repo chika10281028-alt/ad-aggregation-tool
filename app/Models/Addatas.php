@@ -10,7 +10,7 @@ class Addatas extends Model
     use Sortable;
     public $timestamps = false;
 
-    public $sortable = ['id', 'impression', 'click', 'cost', 'cv', 'createdDate'];
+    public $sortable = ['id', 'impression', 'click', 'cost', 'cv', 'createdDate', 'activeFlg'];
     public $sortableAs = ['campaignName', 'mediaName'];
 
     protected $fillable = ['mediasId', 'campaignsId', 'activeFlg'];

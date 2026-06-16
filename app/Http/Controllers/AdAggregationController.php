@@ -21,6 +21,7 @@ class AdAggregationController extends Controller
 
     $query->where('medias.activeFlg', '1');
     $query->where('campaigns.activeFlg', '1');
+    $query->where('addatas.activeFlg', '1');
 
     // 開始日時、終了日時が空でない場合、検索条件に含める
     if (!empty($startDate)) {

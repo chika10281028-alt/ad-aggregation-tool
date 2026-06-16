@@ -74,7 +74,6 @@
                 <th>@sortablelink('cv', 'CV')</th>
                 <th>@sortablelink('createdDate', '日時')</th>
                 <th>@sortablelink('activeFlg', '有効無効フラグ')</th>
-                <th></th>
             </tr>
         </thead>
         @foreach ($addatas as $addata)
@@ -82,10 +81,10 @@
             <td>{{$addata->id}}</td>
             <td>{{$addata->mediaName}}</td>
             <td>{{$addata->campaignName}}</td>
-            <td><?php echo number_format($addata->impression); ?></td>
-            <td><?php echo number_format($addata->click); ?></td>
-            <td><?php echo number_format($addata->cost); ?></td>
-            <td><?php echo number_format($addata->cv); ?></td>
+            <td align="right"><?php echo number_format($addata->impression); ?></td>
+            <td align="right"><?php echo number_format($addata->click); ?></td>
+            <td align="right"><?php echo number_format($addata->cost); ?></td>
+            <td align="right"><?php echo number_format($addata->cv); ?></td>
             <td>{{$addata->createdDate}}</td>
             <td>
                 <?php
@@ -95,7 +94,6 @@
                     echo "無効";
                 }
                 ?></td>
-            <td><button onClick="location.href='{{ route('addata_update',['id' => $addata->id]) }}' ">更新</button></td>
         </tr>
         @endforeach
     </table>
